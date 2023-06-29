@@ -1,0 +1,209 @@
+
+/* 1 урок */
+
+/* root selector */
+
+
+:root {
+    background: #fff;
+}
+
+/* global selector */
+
+* {
+    color: black;
+}
+
+/* tag selector */
+
+h1 {
+    color: blue;
+}
+
+/* class selector */
+
+.green {
+    color: green;
+}
+
+/* id selector */
+
+#blue {
+    color: blue;
+}
+
+/* Селектор нащадка */
+
+div .box {
+    background: rgb(16, 144, 16);
+}
+
+
+div .box p {
+    background: red;
+}
+
+div .brown {
+    background: brown;
+    color: white;
+}
+
+/* Дочірній cелектор */
+
+ul > li {
+    background: red;
+}
+
+/* Сестринський селектор */
+
+button + span  {
+    background: red;
+}
+
+/* Сусідський селектор */
+
+ .susid ~ p{
+    background: blue;
+    color: white;
+}
+
+/* Використання декількох селекторів */
+
+.salo, #bread {
+    background: yellow;
+}
+
+/* 2 урок*/
+
+/* Селектор першої дитини*/
+
+div .first-task li:first-child {
+    color: rgb(255, 255, 255);
+    }
+
+div .second-task li:first-child {
+    color: rgb(234, 255, 0);
+    }
+    
+
+div .third-task li:first-child {
+    background: rgb(234, 255, 0);
+    }
+
+/* Селектор останньої дитини */
+
+div .fourth-task li:last-child {
+    color: rgb(234, 255, 0);
+    }
+        
+div .fifth-task li:last-child {
+    color: rgb(252, 252, 252);
+    }
+
+
+/* Селектор одиничної дитини */
+
+
+div .only-child-task div:only-child {
+    color: rgb(255, 0, 0);
+    }
+
+/* Селектор першого типу */
+
+
+div .seven-task p:first-of-type {
+    background: red;
+}
+
+/* Селектор останнього типу */
+
+div .eight-task p:last-of-type {
+    background: red;
+}
+
+/* Селектор одиничного типу */
+
+div .nine-task p:only-of-type {
+    background: yellow;
+}
+
+/* 3 урок*/
+
+/* 1) селектор назви атрибута */
+
+a[href] {
+    color: white;
+    }
+
+/* 2) селектор назви атрибута */
+
+li[value] {
+    color:rgb(234, 255, 0);
+}
+
+/* 3) селектор значення атрибута */
+
+li[value='3'] {
+    background: red;
+    color:black;
+}
+
+/* 4) селектор наявності значення атрибута */
+
+button[class~='primary'] {
+    background: blue;
+}
+
+/* 5) Cелектор префіксу значення атрибута */
+
+button[class|="secondary"] {
+    background: red
+}
+
+/* 6) Cелектор початку значення атрибута */
+
+.lesson-three-task-six li[class^="b"] {
+    background: white;
+    color: green;
+    }
+
+/* 7) Cелектор кореня значення атрибута */
+
+ .lesson-three-task-seven li[class*="on"] {
+    background: white;
+    color: green;
+    }
+
+/* 8) Cелектор кінцівки значення атрибута */
+
+.lesson-three-task-eight span[class$="s"] {
+    background: white;
+    color: blue;
+    }
+
+/* 9) Cелектор псевдоелементу першої літери */
+
+.lesson-three-task-nine h2::first-letter {
+    color: red;
+    }
+
+/* 10) Cелектор псевдоелементу першого рядка */
+
+.lesson-three-task-ten p::first-line {
+    background: yellow;
+    }
+
+/* 11) Cелектор псевдоелемента плейсхолдера */
+
+.lesson-three-task-eleven input::placeholder {
+    background: red;
+    color:white;
+    }
+
+/* 12) Cелектор псевдоелементу ”попереду” */
+
+.lesson-three-task-twelve li::before {content:"➤"}
+
+/* 13) Cелектор псевдоелементу ”після” */
+
+.lesson-three-task-thirteen li::after {content:"➤"}
