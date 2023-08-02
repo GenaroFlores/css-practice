@@ -149,13 +149,12 @@ div, h1, h2, p {
 }
 
 .featured {
-    display:flex;
-    justify-content: space-around;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: var(--space-xl);
     padding: var(--space-xl);
     border-bottom: 1px solid var(--color-border);
-    flex-shrink: 1;
+    
 }
 
 .card {
@@ -209,15 +208,7 @@ div, h1, h2, p {
     display:flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--color-primary);
-    border-radius: 8px;
-    padding: var(--space-l);
-}
 
-/* .actions {
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
     background-color: var(--color-primary);
     border-radius: 8px;
     padding: var(--space-l);
@@ -226,7 +217,7 @@ div, h1, h2, p {
 .actions_content {
     display: flex;
     flex-direction: column;
-    gap: var(--space-s)
+    gap: var(--space-m)
 }
 
 .actions_label {
@@ -239,7 +230,12 @@ div, h1, h2, p {
 .actions_button {
     background-color: var(--color-white);
     color: var(--color-featured);
-    width: 100%;
-    max-width: 160px;
-    font-size: 20px;
-} */
+    width: 240px;
+    max-width: 100%;
+    font-size: var(--size-l);
+    text-align: center;
+    border-radius: calc(var(--border-radius) / 2);
+    padding: 16px 80px;
+    text-decoration: none;
+}
+
