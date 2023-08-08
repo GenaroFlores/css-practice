@@ -1,0 +1,70 @@
+<header class="header">
+    <div>
+        {{> logo}}
+    </div>
+    
+    <nav class="header_nav">
+        <div class="header_nav_right">
+            {{> nav list=header}}
+        </div>
+    </nav>
+</header>
+
+<main class="main">
+    <div class="hero">
+        {{#with info}}
+            <h1 class="hero_title">{{title}}</h1> 
+            <p class="hero_text">{{description}}</p>
+        {{/with}}
+    </div>
+
+    
+    <form class="form">
+        {{#with form}} 
+            <div class="form_input_list">
+                {{#each inputs}} 
+                    <input type="{{type}}" placeholder="{{placeholder}}" class="form_input" name="{{name}}" id="form-input-{{id}}" />
+                {{/each}}
+            </div>
+            <div class="form_checkbox_block">
+                <input type="checkbox" name="{{checkbox.name}}" id="{{checkbox.name}}"/>
+                <label for="{{checkbox.name}}">{{checkbox.label}}</label>
+            </div>
+            <button type="submit" class="form_button">{{button}}</button>
+            <div class="divider"></div>
+            <p class="form_info">{{info}}</p>
+        {{/with}}
+    </form>
+</main>
+
+<div class="updates">
+   {{#with updates}}
+        <h3 class="updates_title">{{title}}</h3>
+        {{#each list}}
+            <div class="upd">
+                <img src="https://picsum.photos/320/320" alt="User photo" class="upd_img">
+                <div class="upd_content">
+                    <span class="upd_nick">@{{nickname}}</span>
+                    <p class="upd_text">{{description}}</p>
+                </div>
+            </div>
+        {{/each}}
+        {{#with show_all}}
+            <a href="{{url}}" class="upd_link">{{text}}</a>
+        {{/with}}
+    {{/with}}
+</div>
+
+<footer class="footer">
+    <div>
+        {{> logo}}
+        <span class="footer_copyright">Copyright 2023-2024</span>
+    </div>
+
+    {{#each footer}}
+        <div>
+            <span class="footer_title">{{title}}</span>
+            {{> nav list=links isVertical=true}}
+        </div>
+    {{/each}}
+</footer>
